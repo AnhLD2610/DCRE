@@ -16,7 +16,7 @@ warnings.filterwarnings("ignore")
 
 from sampler import data_sampler_CFRL
 from data_loader import get_data_loader_BERT
-from utils import Moment, gen_data
+from utils import Moment
 from encoder import EncodingModel
 
 from losses import MutualInformationLoss, HardSoftMarginTripletLoss, HardMarginLoss
