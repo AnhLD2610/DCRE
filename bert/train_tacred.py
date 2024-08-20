@@ -369,10 +369,10 @@ class Manager(object):
             historic_test_data, seen_relations, seen_descriptions) in enumerate(sampler):
 
             for rel in current_relations:
-                ids = self.tokenizer.encode(seen_descriptions[rel],
+                ids = self.tokenizer.encode(seen_descriptions[rel][0],
                                     padding='max_length',
                                     truncation=True,
-                                    max_length=self.config.max_length)        
+                                    max_length=self.config.max_length)     
                 # mask
                 mask = np.zeros(self.config.max_length, dtype=np.int32)
                 end_index = np.argwhere(np.array(ids) == self.tokenizer.get_vocab()[self.tokenizer.sep_token])[0][0]

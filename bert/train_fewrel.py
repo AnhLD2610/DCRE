@@ -367,7 +367,7 @@ class Manager(object):
             historic_test_data, seen_relations, seen_descriptions) in enumerate(sampler):
 
             for rel in current_relations:
-                ids = self.tokenizer.encode(seen_descriptions[rel],
+                ids = self.tokenizer.encode(seen_descriptions[rel][0],
                                     padding='max_length',
                                     truncation=True,
                                     max_length=self.config.max_length)        
