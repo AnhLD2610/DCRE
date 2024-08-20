@@ -229,7 +229,7 @@ class HardMarginLoss(nn.Module):
         self.distance_metric = distance_metric
 
     def forward(self, rep_des, hidden, labels: Tensor, size_average=False):
-
+       
         distance_matrix = self.distance_metric(rep_des, hidden)
         negs = distance_matrix[labels == 0]
         poss = distance_matrix[labels == 1]
