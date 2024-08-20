@@ -42,7 +42,7 @@
    ```
 2. Install necessary packages:
    ```
-   !pip install transformers==4.40.0 torch==2.3.0 scikit-learn 
+   !pip install transformers==4.40.0 torch==2.3.0 scikit-learn ==1.4.2
    !pip install llm2vec==0.2.2
    !pip install flash-attn --no-build-isolation
    ```
